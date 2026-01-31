@@ -1,0 +1,9 @@
+# Render Blueprint: deploy LinearRegressionUI as a Static Site
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: linear-regression-ui
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    rootDir: LinearRegressionUI
